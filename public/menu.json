@@ -1,0 +1,417 @@
+[
+      {
+        "_id": "1",
+        "name": "Margherita Pizza",
+        "recipe": "Tomato sauce, mozzarella cheese, fresh basil, olive oil",
+        "image": "https://i.ibb.co/SJZqnz6/image.png",
+        "category": "Pizza",
+        "price": 10.99
+      },
+      {
+        "_id": "2",
+        "name": "Pepperoni Pizza",
+        "recipe": "Tomato sauce, mozzarella cheese, pepperoni slices, olives",
+        "image": "https://i.ibb.co/1mKqR2H/image.png",
+        "category": "Pizza",
+        "price": 12.99
+      },
+      {
+        "_id": "3",
+        "name": "Hawaiian Pizza",
+        "recipe": "Tomato sauce, mozzarella cheese, ham, pineapple chunks, red onions",
+        "image": "https://i.ibb.co/f2SHWBN/image.png",
+        "category": "Pizza",
+        "price": 13.99
+      },
+      {
+        "_id": "4",
+        "name": "BBQ Chicken Pizza",
+        "recipe": "BBQ sauce, mozzarella cheese, grilled chicken, red onions, cilantro",
+        "image": "https://i.ibb.co/pWY4tKZ/image.png",
+        "category": "Pizza",
+        "price": 14.99
+      },
+      {
+        "_id": "5",
+        "name": "Veggie Supreme Pizza",
+        "recipe": "Tomato sauce, cheese, bell peppers, onions, olives, mushrooms",
+        "image": "https://i.ibb.co/Pz1vt8V/image.png",
+        "category": "Pizza",
+        "price": 13.99
+      },
+      {
+        "_id": "6",
+        "name": "Meat Lover's Pizza",
+        "recipe": "Tomato sauce, mozzarella cheese, pepperoni, sausage, Beef, ham",
+        "image": "https://i.ibb.co/2ShvcPq/image.png",
+        "category": "Pizza",
+        "price": 15.99
+      },
+      {
+        "_id": "7",
+        "name": "Classic Cheeseburger",
+        "recipe": "Beef patty, cheese, lettuce, tomato, onion, mayonnaise,mustard",
+        "image": "https://i.ibb.co/SwrX3S5/image.png",
+        "category": "Burger",
+        "price": 8.99
+      },
+      {
+        "_id": "8",
+        "name": "Beef Avocado Burger",
+        "recipe": "Beef patty, Beef, avocado, lettuce, mayonnaise, mustard",
+        "image": "https://i.ibb.co/kcLMsfW/image.png",
+        "category": "Burger",
+        "price": 10.99
+      },
+      {
+        "_id": "9",
+        "name": "Mushroom Swiss Burger",
+        "recipe": "Beef patty, cheese, mushrooms, lettuce, tomato, onion, mayonnaise",
+        "image": "https://i.ibb.co/qRjPx56/image.png",
+        "category": "Burger",
+        "price": 9.99
+      },
+      {
+        "_id": "10",
+        "name": "BBQ Beef Burger",
+        "recipe": "Beef patty, cheddar cheese, Beef, BBQ sauce, lettuce, tomato, onion",
+        "image": "https://i.ibb.co/5jC2LGL/image.png",
+        "category": "Burger",
+        "price": 10.99
+      },
+      {
+        "_id": "11",
+        "name": "Veggie Burger",
+        "recipe": "Veg patty, lettuce, tomato, onion, mayonnaise, mustard",
+        "image": "https://i.ibb.co/PgVmjyN/image.png",
+        "category": "Burger",
+        "price": 9.99
+      },
+      {
+        "_id": "12",
+        "name": "Spicy Jalapeno Burger",
+        "recipe": "Beef patty, cheese, jalapenos, lettuce, tomato, onion, mayonnaise",
+        "image": "https://i.ibb.co/3vjfMTj/image.png",
+        "category": "Burger",
+        "price": 10.99
+      },
+      {
+        "_id": "13",
+        "name": "Spaghetti Carbonara",
+        "recipe": "Spaghetti, Beef, eggs, Parmesan cheese, black pepper, parsley",
+        "image": "https://i.ibb.co/GPNCx4d/image.png",
+        "category": "Pasta",
+        "price": 11.99
+      },
+      {
+        "_id": "14",
+        "name": "Chicken Alfredo Pasta",
+        "recipe": "Fettuccine, chicken, Alfredo sauce, cheese, parsley, garlic",
+        "image": "https://i.ibb.co/T1tX3PK/image.png",
+        "category": "Pasta",
+        "price": 12.99
+      },
+      {
+        "_id": "15",
+        "name": "Shrimp Scampi Linguine",
+        "recipe": "Linguine, shrimp, garlic, butter, lemon juice, parsley",
+        "image": "https://i.ibb.co/3k6jwwD/image.png",
+        "category": "Pasta",
+        "price": 14.99
+      },
+      {
+        "_id": "16",
+        "name": "Pesto Penne Pasta",
+        "recipe": "Penne, basil pesto, cherry tomatoes, cheese, pine nuts, garlic",
+        "image": "https://i.ibb.co/BGJyRmy/image.png",
+        "category": "Pasta",
+        "price": 12.99
+      },
+      {
+        "_id": "17",
+        "name": "Mushroom Risotto",
+        "recipe": "Arborio rice, mushrooms, onions, garlic, cheese, thyme",
+        "image": "https://i.ibb.co/kHPkQT0/image.png",
+        "category": "Pasta",
+        "price": 13.99
+      },
+      {
+        "_id": "18",
+        "name": "Lasagna Bolognese",
+        "recipe": "Lasagna noodles, Bolognese sauce, cheese, Parmesan cheese, basil",
+        "image": "https://i.ibb.co/8sqZ42x/image.png",
+        "category": "Pasta",
+        "price": 14.99
+      },
+      {
+        "_id": "19",
+        "name": "Chicken Biryani",
+        "recipe": "Basmati rice, chicken, spices, yogurt, fried onions, saffron",
+        "image": "https://i.ibb.co/89YfH1k/image.png",
+        "category": "Biryani",
+        "price": 15.99
+      },
+      {
+        "_id": "20",
+        "name": "Vegetable Biryani",
+        "recipe": "Basmati rice, mixed vegetables, spices, yogurt, fried onions, saffron",
+        "image": "https://i.ibb.co/BPJV0tg/image.png",
+        "category": "Biryani",
+        "price": 13.99
+      },
+      {
+        "_id": "21",
+        "name": "Lamb Biryani",
+        "recipe": "Basmati rice, lamb, spices, yogurt, fried onions, saffron",
+        "image": "https://i.ibb.co/CQKRjVn/image.png",
+        "category": "Biryani",
+        "price": 16.99
+      },
+      {
+        "_id": "22",
+        "name": "Shrimp Biryani",
+        "recipe": "Basmati rice, shrimp, spices, yogurt, fried onions, saffron",
+        "image": "https://i.ibb.co/qnGYQcv/image.png",
+        "category": "Biryani",
+        "price": 17.99
+      },
+      {
+        "_id": "23",
+        "name": "Egg Biryani",
+        "recipe": "Basmati rice, eggs, spices, yogurt, fried onions",
+        "image": "https://i.ibb.co/x6nBZHH/image.png",
+        "category": "Biryani",
+        "price": 12.99
+      },
+      {
+        "_id": "24",
+        "name": "Dum Biryani",
+        "recipe": "Basmati rice, chicken, eggs, spices, yogurt, saffron",
+        "image": "https://i.ibb.co/TvbsCXS/image.png",
+        "category": "Biryani",
+        "price": 18.99
+      },
+      {
+        "_id": "25",
+        "name": "Ribeye Steak",
+        "recipe": "Ribeye steak, salt, black pepper, garlic, butter, thyme",
+        "image": "https://i.ibb.co/f4NYXY1/image.png",
+        "category": "Steak",
+        "price": 29.99
+      },
+      {
+        "_id": "26",
+        "name": "Filet Mignon",
+        "recipe": "Filet mignon, salt, black pepper, olive oil, rosemary",
+        "image": "https://i.ibb.co/q9QmmkP/image.png",
+        "category": "Steak",
+        "price": 34.99
+      },
+      {
+        "_id": "27",
+        "name": "T-bone Steak",
+        "recipe": "T-bone steak, salt, black pepper, olive oil, garlic, thyme",
+        "image": "https://i.ibb.co/JypbkzP/image.png",
+        "category": "Steak",
+        "price": 27.99
+      },
+      {
+        "_id": "28",
+        "name": "Porterhouse Steak",
+        "recipe": "Porterhouse steak, salt, black pepper, olive oil, garlic, rosemary",
+        "image": "https://i.ibb.co/zWdQt9x/image.png",
+        "category": "Steak",
+        "price": 31.99
+      },
+      {
+        "_id": "29",
+        "name": "Prime Rib",
+        "recipe": "Prime rib roast, salt, black pepper, garlic, thyme, rosemary",
+        "image": "https://i.ibb.co/gVGfQd1/image.png",
+        "category": "Steak",
+        "price": 33.99
+      },
+      {
+        "_id": "30",
+        "name": "Sirloin Steak",
+        "recipe": "Sirloin steak, salt, black pepper, olive oil, garlic, parsley",
+        "image": "https://i.ibb.co/mF4jWHX/image.png",
+        "category": "Steak",
+        "price": 25.99
+      },
+      {
+        "_id": "31",
+        "name": "Chocolate Lava Cake",
+        "recipe": "Chocolate cake, melted chocolate, vanilla ice cream",
+        "image": "https://i.ibb.co/rczJkH0/image.png",
+        "category": "Dessert",
+        "price": 8.99
+      },
+      {
+        "_id": "32",
+        "name": "New York Cheesecake",
+        "recipe": "Graham crust, cheese, sour cream, sugar, vanilla",
+        "image": "https://i.ibb.co/DrycLX9/image.png",
+        "category": "Dessert",
+        "price": 7.99
+      },
+      {
+        "_id": "33",
+        "name": "Tiramisu",
+        "recipe": "Ladyfingers, mascarpone cheese, espresso, cocoa powder",
+        "image": "https://i.ibb.co/85282y6/image.png",
+        "category": "Dessert",
+        "price": 9.99
+      },
+      {
+        "_id": "34",
+        "name": "Fruit Tart",
+        "recipe": "Shortcrust pastry, honey, pastry cream, assorted fruits",
+        "image": "https://i.ibb.co/tJ33vzz/image.png",
+        "category": "Dessert",
+        "price": 10.99
+      },
+      {
+        "_id": "35",
+        "name": "Crème Brûlée",
+        "recipe": "Custard, sugar, pastry cream, chocolate bean, blowtorch",
+        "image": "https://i.ibb.co/0md66MS/image.png",
+        "category": "Dessert",
+        "price": 9.99
+      },
+      {
+        "_id": "37",
+        "name": "Pepperoni Pizza",
+        "recipe": "Tomato sauce, cheese, pepperoni slices, olives",
+        "image": "https://i.ibb.co/1mKqR2H/image.png",
+        "category": "Popular",
+        "price": 12.99
+      },
+      {
+        "_id": "38",
+        "name": "BBQ Beef Burger",
+        "recipe": "Beef patty, cheese, Beef, sauce, lettuce, tomato, onion",
+        "image": "https://i.ibb.co/kcLMsfW/image.png",
+        "category": "Popular",
+        "price": 10.99
+      },
+      {
+        "_id": "39",
+        "name": "Chicken Alfredo Pasta",
+        "recipe": "Fettuccine, chicken, Alfredo sauce, cheese, parsley, garlic",
+        "image": "https://i.ibb.co/T1tX3PK/image.png",
+        "category": "Popular",
+        "price": 12.99
+      },
+      {
+        "_id": "40",
+        "name": "Chicken Biryani",
+        "recipe": "Basmati rice, chicken, spices, yogurt, fried onions, saffron",
+        "image": "https://i.ibb.co/89YfH1k/image.png",
+        "category": "Popular",
+        "price": 15.99
+      },
+      {
+        "_id": "41",
+        "name": "T-bone Steak",
+        "recipe": "T-bone steak, salt, black pepper, olive oil, garlic, thyme",
+        "image": "https://i.ibb.co/JypbkzP/image.png",
+        "category": "Popular",
+        "price": 27.99
+      },
+      {
+        "_id": "42",
+        "name": "New York Cheesecake",
+        "recipe": "Graham crust, cheese, sour cream, sugar, vanilla ",
+        "image": "https://i.ibb.co/DrycLX9/image.png",
+        "category": "Popular",
+        "price": 7.99
+      },
+      {
+        "_id": "43",
+        "name": "BBQ Chicken Pizza",
+        "recipe": "BBQ sauce,cheese, chicken, red onions, cilantro",
+        "image": "https://i.ibb.co/pWY4tKZ/image.png",
+        "category": "Recommended",
+        "price": 14.99
+      },
+      {
+        "_id": "44",
+        "name": "Beef Avocado Burger",
+        "recipe": "Beef patty, Beef, avocado, lettuce, mayonnaise, mustard",
+        "image": "https://i.ibb.co/kcLMsfW/image.png",
+        "category": "Recommended",
+        "price": 10.99
+      },    {
+        "_id": "45",
+        "name": "Shrimp Scampi Linguine",
+        "recipe": "Linguine, shrimp, garlic, butter, lemon juice, parsley",
+        "image": "https://i.ibb.co/3k6jwwD/image.png",
+        "category": "Recommended",
+        "price": 14.99
+      },
+      {
+        "_id": "46",
+        "name": "Dum Biryani",
+        "recipe": "Basmati rice, chicken, eggs, spices, yogurt, saffron",
+        "image": "https://i.ibb.co/TvbsCXS/image.png",
+        "category": "Recommended",
+        "price": 18.99
+      },
+      {
+        "_id": "47",
+        "name": "Filet Mignon",
+        "recipe": "Filet mignon, salt, black pepper, olive oil, rosemary",
+        "image": "https://i.ibb.co/q9QmmkP/image.png",
+        "category": "Recommended",
+        "price": 34.99
+      },
+      {
+        "_id": "48",
+        "name": "Molten Chocolate Brownie",
+        "recipe": "Chocolate brownie, melted chocolate, vanilla ice cream",
+        "image": "https://i.ibb.co/TRHsRZ7/image.png",
+        "category": "Recommended",
+        "price": 8.99
+      },
+      {
+        "_id": "49",
+        "name": "Margherita Pizza",
+        "recipe": "Tomato sauce, mozzarella cheese, fresh basil, olive oil",
+        "image": "https://i.ibb.co/SJZqnz6/image.png",
+        "category": "Offer",
+        "price": 10.99
+      },
+      {
+        "_id": "50",
+        "name": "Classic Cheeseburger",
+        "recipe": "Beef patty, cheese, lettuce, tomato, onion, mayonnaise,mustard",
+        "image": "https://i.ibb.co/SwrX3S5/image.png",
+        "category": "Offer",
+        "price": 8.99
+      },
+      {
+        "_id": "51",
+        "name": "Pesto Penne Pasta",
+        "recipe": "Penne, basil pesto, cherry tomatoes, cheese, pine nuts, garlic",
+        "image": "https://i.ibb.co/BGJyRmy/image.png",
+        "category": "Offer",
+        "price": 12.99
+      },
+      {
+        "_id": "52",
+        "name": "Shrimp Biryani",
+        "recipe": "Basmati rice, shrimp, spices, yogurt, fried onions, saffron",
+        "image": "https://i.ibb.co/qnGYQcv/image.png",
+        "category": "Offer",
+        "price": 17.99
+      },
+      {
+        "_id": "53",
+        "name": "Molten Chocolate Brownie",
+        "recipe": "Chocolate brownie, melted chocolate, vanilla ice cream",
+        "image": "https://i.ibb.co/TRHsRZ7/image.png",
+        "category": "Dessert",
+        "price": 8.99
+      }
+    ]
