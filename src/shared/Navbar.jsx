@@ -1,7 +1,18 @@
 import { FaBars, FaCartPlus } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
+import useUserData from "../hooks/useUserData";
 
 const Navbar = () => {
+  const { user, logOut } = useAuth()
+  const {userList}=useUserData();
+  const FilterUserList = userList.filter(item => item.email === user?.email);
+  const imageFilter = FilterUserList.map(user => user.image);
+  const handleLogOut = () => {
+    logOut()
+        .then(() => { })
+        .catch(error => console.log(error));
+}
     const NavItem = <>
           
     <Link to="/"> <li> <span className="text-2xl text-black font-medium hover:bg-amber-400">Home</span> </li></Link>
@@ -42,21 +53,22 @@ const Navbar = () => {
           <div className="dropdown dropdown-end">
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-               <img alt="avatar" src="/user.png" /> 
+                {user? <img alt="avatar" src={imageFilter} /> :  <img alt="avatar" src="/user.png" />  }
+              
               </div>
             </div>
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-amber-100 rounded-box w-52">
-          
+            {user ? 
                   <>
                   <NavLink to="/"> <li> <span className="text-xl text-black font-medium hover:bg-amber-400">Dashboard</span> </li></NavLink>
-                  <button> <li> <span className="text-xl text-black font-medium hover:bg-amber-400">Logout</span> </li></button>
+                  <button onClick={handleLogOut}> <li> <span className="text-xl text-black font-medium hover:bg-amber-400">Logout</span> </li></button>
                   </>
-                 
+                 :
                   <>
             <NavLink to="/create-account"> <li> <span className="text-xl text-black font-medium hover:bg-amber-400">Create Account</span> </li></NavLink>
             <NavLink to="/continue-in-with-account"> <li> <span className="text-xl text-black font-medium hover:bg-amber-400">Login</span> </li></NavLink>
             </>
-      
+}
       
             </ul>
           </div>
