@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useState } from 'react';
-import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
+import { GoogleAuthProvider, GithubAuthProvider, FacebookAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import { app } from './firebase.config';
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
+const gitprovider = new GithubAuthProvider();
+const fbprovider = new FacebookAuthProvider();
 const AuthProvider = ({ children }) => {
 
 
@@ -30,6 +32,17 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, provider);
       };
 
+      const githubLogin = () => {
+        setLoading(true);
+        return signInWithPopup(auth, gitprovider );
+      };
+
+      const facebookLogin = () => {
+        setLoading(true);
+        return signInWithPopup(auth, fbprovider );
+      };
+
+
     const updateUserProfile = (name, photo) => {
         return updateProfile(auth.currentUser, {
             displayName: name, photoURL: photo
@@ -52,7 +65,9 @@ const AuthProvider = ({ children }) => {
         signIn,
         logOut,
         updateUserProfile,
-        googleLogin
+        googleLogin,
+        githubLogin,
+        facebookLogin
     }
 
     return (

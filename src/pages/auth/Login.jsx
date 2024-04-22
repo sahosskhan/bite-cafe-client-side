@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useContext, useEffect, useState } from "react";
+import {useEffect, useState } from "react";
 import { BiReset } from "react-icons/bi";
 import { FaEye, FaEyeSlash, FaHome } from "react-icons/fa";
 import { IoPersonAddSharp } from "react-icons/io5";
@@ -7,9 +7,10 @@ import { RiAccountBoxFill } from "react-icons/ri";
 import { TbFidgetSpinner } from "react-icons/tb";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { LoadCanvasTemplateNoReload, loadCaptchaEnginge, validateCaptcha } from "react-simple-captcha";
-import { AuthContext } from './../../auth/AuthProvider';
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
+import useAuth from "../../hooks/useAuth";
+import Socialbtn from "./Socialbtn";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -41,7 +42,7 @@ const Login = () => {
       setDisabled(true);
     }
   };
-  const { signIn, loading } = useContext(AuthContext);
+  const { signIn, loading } = useAuth();
 
   const { register, handleSubmit, formState: { errors } } = useForm();      
     const onSubmit = data => {
@@ -185,6 +186,7 @@ const Login = () => {
                 </Link>
                 <p className="text-center text-lg font-semibold my-4">OR</p>
                 
+                <Socialbtn/>
               
               </div>
             </div>

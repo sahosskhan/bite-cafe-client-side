@@ -1,19 +1,20 @@
-import { useContext, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { FaEye, FaEyeSlash, FaHome } from "react-icons/fa";
 import { IoCloseSharp, IoPersonAddSharp } from "react-icons/io5";
 import { RiAccountPinBoxFill, RiImageAddFill } from "react-icons/ri";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../auth/AuthProvider";
 
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
+import useAuth from "../../hooks/useAuth";
+import Socialbtn from "./Socialbtn";
 
 
 const Register = () => {
     const axiosPublic = useAxiosPublic();
     const navigate = useNavigate();
-    const { createUser, updateUserProfile } = useContext(AuthContext);
+    const { createUser, updateUserProfile } = useAuth();
     const [termsAccepted, setTermsAccepted] = useState(false);
     const handleTermsChange = (e) => {
         setTermsAccepted(e.target.checked);
@@ -54,7 +55,7 @@ const Register = () => {
         const images = imageFile;
         const formData = new FormData();
         formData.append('image', images);
-        const url = "https://api.imgbb.com/1/upload?key=6273bd312b6b06c225c0b5a1c1f4f59f";
+        const url = `https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_ImgBBAPI}`;
 
 
         fetch(url, {
@@ -264,7 +265,7 @@ const Register = () => {
                 ACCOUNT
               </Link>
               <p className="text-center text-lg font-semibold my-4">OR</p>
-             
+              <Socialbtn/>
             </div>
           </div>
         </div>
