@@ -6,3 +6,34 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+.thumbs-wrapper ul{
+  display:flex !important;
+  justify-content: center !important;
+
+}
+
+/* About */
+.about-image{
+  background-image: url('../assets/home/banner.jpg');
+  height: 500px;
+}
+
+.featured-item{
+  background-image: url('../assets/home/banner.jpg');
+}
+.heading-banner-bg{
+  height: 70vh;
+  width: 100%;
+}
+
+.menu-banner-bg{
+  height: 30vh;
+  width: 100%;
+}
+
+
+
+.bg-form {
+  background-image: url("../assets/others/from-bg.jpg");
+}
+
