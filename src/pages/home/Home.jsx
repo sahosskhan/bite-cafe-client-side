@@ -1,9 +1,10 @@
-
+import bgImg from '../../../assets/menu/menu-bg.png';
+import SliderMain from '../../components/home/SliderMain';
 
 const Home = () => {
     return (
-        <div>
-            <h1 className="">This Is Home</h1>    
+        <div style={{backgroundImage: `url(${bgImg})`}}>
+       <SliderMain/>
         </div>
     );
 };
