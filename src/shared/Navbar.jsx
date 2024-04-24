@@ -46,12 +46,16 @@ const [cart] = useCarts();
           </ul>
         </div>
         <div className="navbar-end">
+       
+
+          
         <div className="flex justify-center items-center gap-2">
+        <NavLink to="/dashboard/my-cart">
         <button className="h-12 inline-flex rounded-btn justify-center items-center gap-4 px-3 py-2 bg-amber-400 hover:bg-amber-400  text-black font-medium  border-0">
         <FaCartPlus size={25} />
         <div className="bg-amber-100 inline-flex justify-center items-center py-1 px-2 text-xl rounded-badge">{cart?.length || 0}</div>
       </button>
-      
+      </NavLink>
           <div className="dropdown dropdown-end">
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
@@ -62,7 +66,7 @@ const [cart] = useCarts();
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-amber-100 rounded-box w-52">
             {user ? 
                   <>
-                  <NavLink to="/"> <li> <span className="text-xl text-black font-medium hover:bg-amber-400">Dashboard</span> </li></NavLink>
+                  <NavLink to="/dashboard"> <li> <span className="text-xl text-black font-medium hover:bg-amber-400">Dashboard</span> </li></NavLink>
                   <button onClick={handleLogOut}> <li> <span className="text-xl text-black font-medium hover:bg-amber-400">Logout</span> </li></button>
                   </>
                  :

@@ -5,6 +5,10 @@ import Register from "../pages/auth/Register";
 import Login from "../pages/auth/Login";
 import Menu from "../pages/menu/Menu";
 import Order from './../pages/order/Order';
+import DashboardLayout from "../layouts/DashboardLayout";
+import MyCart from "../pages/dashboard/user/MyCart";
+
+
 
 
 export const router = createBrowserRouter([
@@ -17,6 +21,16 @@ export const router = createBrowserRouter([
       { path: "/order-here/:category", element: <Order /> }, 
     
     ],
+  },
+  {
+    path: 'dashboard',
+    element: <DashboardLayout/>, 
+    children: [
+      {
+        path: 'my-cart', 
+        element: <MyCart></MyCart>
+      }
+    ]
   },
   { path: "/create-account", element: <Register /> },
   { path: "/continue-in-with-account", element: <Login /> },
