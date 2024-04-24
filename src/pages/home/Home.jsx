@@ -3,6 +3,7 @@ import About from '../../components/home/About';
 import CategorySwipe from '../../components/home/CategorySwipe';
 import SliderMain from '../../components/home/SliderMain';
 import HeadingTitle from './../../components/template/HeadingTitle';
+import PopularMenu from './../../components/home/PopularMenu';
 
 const Home = () => {
     return (
@@ -11,6 +12,8 @@ const Home = () => {
        <HeadingTitle text={{ short: 'From 11:00am to 11:00pm', long: 'ORDER ONLINE' }} />
        <CategorySwipe/>
        <About/>
+       <HeadingTitle text={{ short: 'Must be Check it out', long: 'POPULAR MENU' }} />
+       <PopularMenu/>
         </div>
     );
 };
