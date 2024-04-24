@@ -4,6 +4,8 @@ import CategorySwipe from '../../components/home/CategorySwipe';
 import SliderMain from '../../components/home/SliderMain';
 import HeadingTitle from './../../components/template/HeadingTitle';
 import PopularMenu from './../../components/home/PopularMenu';
+import Delivery from './../../components/home/Delivery';
+import Recommend from '../../components/home/Recommend';
 
 const Home = () => {
     return (
@@ -14,6 +16,9 @@ const Home = () => {
        <About/>
        <HeadingTitle text={{ short: 'Must be Check it out', long: 'POPULAR MENU' }} />
        <PopularMenu/>
+       <Delivery/>
+       <HeadingTitle text={{ short: 'Recommended by our chef', long: 'RECOMMENDS MENU' }} />
+       <Recommend/>
         </div>
     );
 };
