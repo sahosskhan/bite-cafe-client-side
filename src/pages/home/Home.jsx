@@ -6,6 +6,7 @@ import HeadingTitle from './../../components/template/HeadingTitle';
 import PopularMenu from './../../components/home/PopularMenu';
 import Delivery from './../../components/home/Delivery';
 import Recommend from '../../components/home/Recommend';
+import Testimonial from '../../components/home/Testimonial';
 
 const Home = () => {
     return (
@@ -19,6 +20,8 @@ const Home = () => {
        <Delivery/>
        <HeadingTitle text={{ short: 'Recommended by our chef', long: 'RECOMMENDS MENU' }} />
        <Recommend/>
+       <HeadingTitle text={{ short: 'What our clients say', long: 'OUR TESTIMONIALS' }} />
+       <Testimonial/>
         </div>
     );
 };
