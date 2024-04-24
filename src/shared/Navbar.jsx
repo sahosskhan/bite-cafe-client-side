@@ -2,6 +2,7 @@ import { FaBars, FaCartPlus } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import useUserData from "../hooks/useUserData";
+import useCarts from "../hooks/useCarts";
 
 const Navbar = () => {
   const { user, logOut } = useAuth()
@@ -13,6 +14,7 @@ const Navbar = () => {
         .then(() => { })
         .catch(error => console.log(error));
 }
+const [cart] = useCarts();
     const NavItem = <>
           
     <Link to="/"> <li> <span className="text-2xl text-black font-medium hover:bg-amber-400">Home</span> </li></Link>
@@ -47,7 +49,7 @@ const Navbar = () => {
         <div className="flex justify-center items-center gap-2">
         <button className="h-12 inline-flex rounded-btn justify-center items-center gap-4 px-3 py-2 bg-amber-400 hover:bg-amber-400  text-black font-medium  border-0">
         <FaCartPlus size={25} />
-        <div className="bg-amber-100 inline-flex justify-center items-center py-1 px-2 text-xl rounded-badge">+99</div>
+        <div className="bg-amber-100 inline-flex justify-center items-center py-1 px-2 text-xl rounded-badge">{cart?.length || 0}</div>
       </button>
       
           <div className="dropdown dropdown-end">

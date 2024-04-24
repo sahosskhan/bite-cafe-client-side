@@ -2,13 +2,14 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import useMenu from "../../hooks/useMenu";
 import Loader from "../../components/loader/Loader";
-import { Parallax } from "swiper/modules";
+
 import HeadingBanner from "../../components/template/HeadingBanner";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import 'react-tabs/style/react-tabs.css';
 import img1 from '../../../assets/shop/banner2.jpg';
 import bgImg from '../../../assets/menu/menu-bg.png';
 import OrderTabData from "../../components/order/OrderTabData";
+import { Parallax } from "react-parallax";
 const Order = () => {
     const categories = ['Biryani', 'Steak', 'Pizza', 'Burger', 'Pasta', 'Dessert'];
     const { category } = useParams();
