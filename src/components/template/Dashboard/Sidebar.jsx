@@ -2,10 +2,11 @@ import { useState } from "react";
 import useAuth from "../../../hooks/useAuth";
 import { AiOutlineBars } from "react-icons/ai";
 import MenuItem from "./MenuItem";
-import { FaHome } from "react-icons/fa";
+import { FaBookmark, FaCalendarAlt, FaHome, FaList, FaUtensils, FaWallet } from "react-icons/fa";
 import { GrLogout } from "react-icons/gr";
 import { Link } from "react-router-dom";
-import { FaCartShopping } from "react-icons/fa6";
+import { FaCartShopping, FaUsersGear } from "react-icons/fa6";
+import { PiCalendarCheckFill, PiShootingStarFill } from "react-icons/pi";
 
 
 const Sidebar = () => {
@@ -16,6 +17,7 @@ const Sidebar = () => {
     setActive(!isActive)
   }
 
+  const isAdmin = true;
     return (
         <div>
              <div className='bg-amber-100 text-gray-800 flex justify-between md:hidden'>
@@ -26,8 +28,8 @@ const Sidebar = () => {
         // className='hidden md:block'
         src="/logo.png"
         alt='logo'
-        width='160'
-        height='100'
+        width='60'
+        height='60'
       />
     </Link>
             </div>
@@ -35,7 +37,7 @@ const Sidebar = () => {
   
           <button
             onClick={handleToggle}
-            className='mobile-menu-button p-4 focus:outline-none focus:bg-gray-200'
+            className='mobile-menu-button p-4 focus:outline-none focus:bg-amber-300'
           >
             <AiOutlineBars className='h-5 w-5' />
           </button>
@@ -43,7 +45,7 @@ const Sidebar = () => {
   
         {/* Sidebar */}
         <div
-          className={`z-10 md:fixed flex flex-col justify-between overflow-x-hidden bg-amber-100 w-64 space-y-6 px-2 py-4 absolute inset-y-0 left-0 transform ${
+          className={`z-10 md:fixed flex flex-col justify-between overflow-x-hidden bg-amber-100 w-72 space-y-6 px-2 py-4 absolute inset-y-0 left-0 transform ${
             isActive && '-translate-x-full'
           }  md:translate-x-0  transition duration-200 ease-in-out`}
         >
@@ -55,7 +57,7 @@ const Sidebar = () => {
         // className='hidden md:block'
         src="/logo.png"
         alt='logo'
-        width='160'
+        width='120'
         height='100'
       />
     </Link>
@@ -64,19 +66,71 @@ const Sidebar = () => {
   
             {/* Nav Items */}
             <div className='flex flex-col justify-between flex-1 mt-6'>
-              <nav>
-                <MenuItem
-                  icon={FaHome}
-                  label='User Home'
-                  address='/dashboard'
-                />
-                        <MenuItem
-                  icon={FaCartShopping}
-                  label='My Cart'
-                  address='/dashboard/my-cart'
-                />
+{ isAdmin ? <nav>
 
-              </nav>
+  <MenuItem
+      icon={FaHome}
+      label='User Home'
+      address='/dashboard/admin-home'
+    />
+  <MenuItem
+      icon={FaUtensils}
+      label='Add Items'
+      address='/dashboard/add-items'
+    />
+      <MenuItem
+      icon={FaList}
+      label='Manage Items'
+      address='/dashboard/manage-items'
+    />
+          <MenuItem
+      icon={FaBookmark}
+      label='Manage Bookings'
+      address='/dashboard/manage-bookings'
+    />
+          <MenuItem
+      icon={FaUsersGear}
+      label='Manage User'
+      address='/dashboard/manage-user'
+    />
+</nav> :
+    <nav>
+    <MenuItem
+      icon={FaHome}
+      label='User Home'
+      address='/dashboard'
+    />
+          <MenuItem
+      icon={FaCalendarAlt}
+      label='Reservation'
+      address='/dashboard/reservation'
+    />
+               <MenuItem
+      icon={FaWallet}
+      label='Payment History'
+      address='/dashboard/payment-history'
+    />
+            <MenuItem
+      icon={FaCartShopping}
+      label='My Cart'
+      address='/dashboard/my-cart'
+    />
+                          <MenuItem
+      icon={PiShootingStarFill}
+      label='Add Review'
+      address='/dashboard/add-review'
+    />
+                          <MenuItem
+      icon={PiCalendarCheckFill}
+      label='My Booking'
+      address='/dashboard/my-booking'
+    />
+
+  </nav>
+
+}
+          
+
             </div>
           </div>
   

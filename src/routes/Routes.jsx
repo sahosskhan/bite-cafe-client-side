@@ -7,6 +7,7 @@ import Menu from "../pages/menu/Menu";
 import Order from './../pages/order/Order';
 import DashboardLayout from "../layouts/DashboardLayout";
 import MyCart from "../pages/dashboard/user/MyCart";
+import ManageUser from "../pages/dashboard/admin/ManageUser";
 
 
 
@@ -28,7 +29,11 @@ export const router = createBrowserRouter([
     children: [
       {
         path: 'my-cart', 
-        element: <MyCart></MyCart>
+        element: <MyCart/>
+      },
+      {
+        path: 'manage-user', 
+        element: <ManageUser/>
       }
     ]
   },
