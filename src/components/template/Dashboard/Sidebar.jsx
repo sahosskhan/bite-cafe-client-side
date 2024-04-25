@@ -7,6 +7,7 @@ import { GrLogout } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import { FaCartShopping, FaUsersGear } from "react-icons/fa6";
 import { PiCalendarCheckFill, PiShootingStarFill } from "react-icons/pi";
+import useAdmin from "../../../hooks/useAdmin";
 
 
 const Sidebar = () => {
@@ -17,7 +18,8 @@ const Sidebar = () => {
     setActive(!isActive)
   }
 
-  const isAdmin = true;
+  const [isAdmin] = useAdmin();
+
     return (
         <div>
              <div className='bg-amber-100 text-gray-800 flex justify-between md:hidden'>
