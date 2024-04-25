@@ -9,6 +9,7 @@ import DashboardLayout from "../layouts/DashboardLayout";
 import MyCart from "../pages/dashboard/user/MyCart";
 import ManageUser from "../pages/dashboard/admin/ManageUser";
 import AdminRoute from "./AdminRoute";
+import AddItems from "../pages/dashboard/admin/AddItems";
 
 
 
@@ -38,7 +39,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'add-items', 
-        element: <AdminRoute><ManageUser/></AdminRoute> 
+        element: <AdminRoute><AddItems/></AdminRoute> 
       }
     ]
   },

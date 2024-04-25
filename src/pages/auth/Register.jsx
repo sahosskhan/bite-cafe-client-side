@@ -151,7 +151,7 @@ const Register = () => {
                             Upload your profile picture
                           </h5>
                           <p className="text-sm text-gray-500">
-                            File Should be in PNG, JPEG or JPG formate
+                            File Should be in PNG, JPEG or JPG format
                           </p>
                         </div>
                       </label>

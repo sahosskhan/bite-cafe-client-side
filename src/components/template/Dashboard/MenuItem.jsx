@@ -7,7 +7,7 @@ const MenuItem = ({ label, address, icon: Icon }) => {
       to={address}
       end
       className={({ isActive }) =>
-        `flex items-center px-4 py-2 my-5 text-xl transition-colors duration-300 transform  hover:bg-black hover:text-white   ${
+        `flex items-center px-4 py-2 my-5 text-lg transition-colors duration-300 transform  hover:bg-black hover:text-white   ${
           isActive ? 'bg-black  text-white' : 'text-black'
         }`
       }
