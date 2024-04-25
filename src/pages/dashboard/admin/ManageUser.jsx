@@ -23,9 +23,9 @@ const ManageUser = () => {
             if(data.modifiedCount){
                 refetch();
                 Swal.fire({
-                    position: 'top-end',
                     icon: 'success',
-                    title: `${item.name} is an Admin Now!`,
+                    title: "Congratulations!",
+                    text: `${item.name} is an Admin Now!`,
                     showConfirmButton: false,
                     timer: 1500
                   })

@@ -8,6 +8,7 @@ import Order from './../pages/order/Order';
 import DashboardLayout from "../layouts/DashboardLayout";
 import MyCart from "../pages/dashboard/user/MyCart";
 import ManageUser from "../pages/dashboard/admin/ManageUser";
+import AdminRoute from "./AdminRoute";
 
 
 
@@ -33,7 +34,11 @@ export const router = createBrowserRouter([
       },
       {
         path: 'manage-user', 
-        element: <ManageUser/>
+        element: <AdminRoute><ManageUser/></AdminRoute> 
+      },
+      {
+        path: 'add-items', 
+        element: <AdminRoute><ManageUser/></AdminRoute> 
       }
     ]
   },
