@@ -4,10 +4,12 @@ import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import useCarts from "../../hooks/useCarts";
+import useAdmin from "../../hooks/useAdmin";
 
 
 const OrderCard = ({item}) => {
     const {user} = useAuth();
+    const [isAdmin, isAdminLoading] = useAdmin();
     const navigate = useNavigate();
     const [, refetch] = useCarts();
     const location = useLocation();
@@ -66,7 +68,10 @@ const OrderCard = ({item}) => {
     <p className="mt-1 text-lg font-normal text-gray-600 ">{recipe}</p>
   </div>
 <div className="flex justify-center items-center mb-8">
-<button onClick={handleAddToCart}  className="btn hover:scale-110 scale-100 transition-all duration-500 btn-outline px-12 text-xl font-medium border-0 text-black hover:text-amber-500 bg-transparent hover:bg-transparent border-black hover:border-amber-500 border-b-4">Add To Cart</button>
+ {
+  isAdmin? "" : <button onClick={handleAddToCart}  className="btn hover:scale-110 scale-100 transition-all duration-500 btn-outline px-12 text-xl font-medium border-0 text-black hover:text-amber-500 bg-transparent hover:bg-transparent border-black hover:border-amber-500 border-b-4">Add To Cart</button>
+ } 
+
 
 
 </div>

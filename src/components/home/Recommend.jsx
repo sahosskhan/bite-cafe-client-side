@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import useMenu from "../../hooks/useMenu";
 import CLoader from "../loader/CLoader";
 import RecommendCard from "../template/RecommendCard";
@@ -21,7 +22,7 @@ const Recommend = () => {
 }
 </div>  
 <div className="flex justify-center items-center my-8">
-<button className="btn hover:scale-110 scale-100 transition-all duration-500 btn-outline px-12 text-xl font-medium border-0 text-black hover:text-amber-500 bg-transparent hover:bg-transparent border-black hover:border-amber-500 border-b-4">Go For Order</button>
+<Link to="/order-here/Biryani" className="btn hover:scale-110 scale-100 transition-all duration-500 btn-outline px-12 text-xl font-medium border-0 text-black hover:text-amber-500 bg-transparent hover:bg-transparent border-black hover:border-amber-500 border-b-4">Go For Order</Link>
         </div>  
         </div>
         </>

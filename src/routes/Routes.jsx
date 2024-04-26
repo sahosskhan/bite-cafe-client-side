@@ -11,6 +11,7 @@ import ManageUser from "../pages/dashboard/admin/ManageUser";
 import AdminRoute from "./AdminRoute";
 import AddItems from "../pages/dashboard/admin/AddItems";
 import ManageItems from "../pages/dashboard/admin/ManageItems";
+import EditItems from "../pages/dashboard/admin/EditItems";
 
 
 
@@ -45,6 +46,12 @@ export const router = createBrowserRouter([
       {
         path: 'manage-items', 
         element: <AdminRoute><ManageItems/></AdminRoute> 
+      },
+      {
+        path: 'edit-items/:id', 
+        element: <AdminRoute><EditItems/></AdminRoute>,
+        loader: ({params})=> fetch (`http://localhost:5000/show-one-menu/${params.id}`) 
+
       }
     ]
   },

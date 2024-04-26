@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 import Loader from "../../../components/loader/Loader";
 import HeadingTitle from "../../../components/template/HeadingTitle";
 import useMenu from "../../../hooks/useMenu";
+import { Link } from "react-router-dom";
 
 const ManageItems = () => {
     const [menu, loading, refetch] = useMenu();
@@ -63,6 +64,7 @@ const ManageItems = () => {
             <th className="py-4 px-6  text-left border-b">#</th>
                 <th className="py-4 px-6  text-left border-b">Image</th>
                 <th className="py-4 px-6  text-left border-b">Name</th>
+                <th className="py-4 px-6  text-left border-b">Category</th>
                 <th className="py-4 px-6  text-left border-b">Price</th>
                 <th className="py-4 px-6  border-b text-end">Action</th>
                 <th className="py-4 px-6  border-b text-end">Action</th>
@@ -78,10 +80,13 @@ const ManageItems = () => {
                     <img src={item.image} alt="img" className="h-20 w-20 object-cover rounded-xl" />
                 </td>
                 <td className="py-4 px-6 border-b text-2xl font-medium">{item.name}</td>
-                
+                <td className="py-4 px-6 border-b text-2xl font-medium">{item.category}</td>
                 <td className="py-4 px-6 border-b text-2xl   font-medium">${item.price}</td>
                 <td className="py-4 px-2 border-b text-end">
-                 <button  className="bg-green-500 hover:scale-110 scale-100 transition-all duration-500 text-white py-2 px-4 text-xl font-medium  rounded-md"><i className="fa-regular fa-pen-to-square"></i></button>
+
+              <Link to={`/dashboard/edit-items/${item._id}`}>
+              <button  className="bg-green-500 hover:scale-110 scale-100 transition-all duration-500 text-white py-2 px-4 text-xl font-medium  rounded-md"><i className="fa-regular fa-pen-to-square"></i></button>
+              </Link>
                     
                     </td>
                 <td className="py-4 px-5 border-b text-end">
