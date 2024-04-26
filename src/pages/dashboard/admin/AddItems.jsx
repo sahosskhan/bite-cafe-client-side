@@ -5,6 +5,7 @@ import HeadingTitle from "../../../components/template/HeadingTitle";
 import { RiImageAddFill } from "react-icons/ri";
 import { IoCloseSharp } from "react-icons/io5";
 import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -14,7 +15,7 @@ const AddItems = () => {
     const img_hosting_url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`
 const axiosPublic = useAxiosPublic();
 const { register, handleSubmit, reset } = useForm();
-
+const navigate = useNavigate()
 
 
 const [showName, setShowName] = useState({});
@@ -65,6 +66,7 @@ const handleImageChange = (event) => {
                             showConfirmButton: false,
                             timer: 1500
                           })
+                          navigate('/dashboard/manage-items')
                     }
                 })
             }
