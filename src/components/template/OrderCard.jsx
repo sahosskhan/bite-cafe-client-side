@@ -9,7 +9,7 @@ import useAdmin from "../../hooks/useAdmin";
 
 const OrderCard = ({item}) => {
     const {user} = useAuth();
-    const [isAdmin, isAdminLoading] = useAdmin();
+    const [isAdmin] = useAdmin();
     const navigate = useNavigate();
     const [, refetch] = useCarts();
     const location = useLocation();
