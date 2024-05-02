@@ -14,8 +14,6 @@ const CheckoutFrom = ({ cart, price }) => {
     const axiosPublic = useAxiosPublic()
     const [cardError, setCardError] = useState('');
     const [clientSecret, setClientSecret] = useState('');
-    const [processing, setProcessing] = useState(false);
-    const [transactionId, setTransactionId] = useState('');
 
     useEffect(() => {
         if (price > 0) {
@@ -72,8 +70,7 @@ const CheckoutFrom = ({ cart, price }) => {
         if (confirmError) {
             console.log(confirmError);
         }
-
-        console.log('payment intent', paymentIntent)
+      
         setProcessing(false)
         if (paymentIntent.status === 'succeeded') {
             setTransactionId(paymentIntent.id);

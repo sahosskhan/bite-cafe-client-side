@@ -53,10 +53,8 @@ const handleImageChange = (event) => {
                 const imgURL = imgResponse.data.display_url;
                 const {name, price, category, recipe} = data;
                 const newItem = {name, price: parseFloat(price), category, recipe, image:imgURL}
-                console.log(newItem)
                 axiosPublic.post('/add-menu-items', newItem)
                 .then(data => {
-                    console.log('after posting new menu item', data.data)
                     if(data.data.insertedId){
                         reset();
                         Swal.fire({

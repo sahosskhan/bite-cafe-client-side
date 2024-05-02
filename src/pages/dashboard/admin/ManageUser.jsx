@@ -69,7 +69,7 @@ const ManageUser = () => {
         <div >
                         {
                 userList?.length === 0? 
-                   <div className=" flex justify-center items-center min-h-screen">
+                   <div className=" flex justify-center items-center ">
                    
                    <h1 className="text-5xl">😑 User Not Found!</h1>
                    

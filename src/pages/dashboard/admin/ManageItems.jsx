@@ -47,7 +47,7 @@ const ManageItems = () => {
                  <div >
                         {
                menu?.length === 0? 
-                   <div className=" flex justify-center items-center min-h-screen">
+                   <div className=" flex justify-center items-center ">
                    
                    <h1 className="text-5xl">😑 Items Not Found!</h1>
                    

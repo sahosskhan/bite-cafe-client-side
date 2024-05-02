@@ -102,7 +102,7 @@ const Sidebar = () => {
     <MenuItem
       icon={FaHome}
       label='User Home'
-      address='/dashboard'
+      address='/dashboard/user-home'
     />
           <MenuItem
       icon={FaCalendarAlt}

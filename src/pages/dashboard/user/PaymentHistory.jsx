@@ -6,7 +6,7 @@ import HistoryTable from "./Payment/HistoryTable";
 const PaymentHistory = () => {
   const [ payment] = usePayment();
     return (
-        <div className="min-h-screen">
+        <div >
           <HeadingTitle text={{ short: 'eat to live, live to pay', long: 'PAYMENT History' }} />  
 
 
@@ -34,8 +34,6 @@ const PaymentHistory = () => {
         </tbody>
     </table>
 </div>
-
-
 
 
         </div>

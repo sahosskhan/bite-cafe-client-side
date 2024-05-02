@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import useUserData from "../hooks/useUserData";
 import useCarts from "../hooks/useCarts";
+import useAdmin from "../hooks/useAdmin";
 
 const Navbar = () => {
   const { user, logOut } = useAuth()
@@ -14,6 +15,7 @@ const Navbar = () => {
         .then(() => { })
         .catch(error => console.log(error));
 }
+const [isAdmin] = useAdmin();
 const [cart] = useCarts();
     const NavItem = <>
           
@@ -66,7 +68,9 @@ const [cart] = useCarts();
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-amber-100 rounded-box w-52">
             {user ? 
                   <>
-                  <NavLink to="/dashboard"> <li> <span className="text-xl text-black font-medium hover:bg-amber-400">Dashboard</span> </li></NavLink>
+                  {!isAdmin?
+                    <NavLink to="/dashboard/user-home"> <li> <span className="text-xl text-black font-medium hover:bg-amber-400">Dashboard</span> </li></NavLink> :        <NavLink to="/dashboard/admin-home"> <li> <span className="text-xl text-black font-medium hover:bg-amber-400">Dashboard</span> </li></NavLink> 
+                  }
                   <button onClick={handleLogOut}> <li> <span className="text-xl text-black font-medium hover:bg-amber-400">Logout</span> </li></button>
                   </>
                  :
