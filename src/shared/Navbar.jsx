@@ -25,7 +25,7 @@ const [cart] = useCarts();
     
 </>
     return (
-        <div className="navbar   bg-amber-100/40">
+        <div className="navbar fixed z-10   bg-amber-100">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

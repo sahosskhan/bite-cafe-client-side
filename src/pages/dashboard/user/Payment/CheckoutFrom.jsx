@@ -79,7 +79,7 @@ const CheckoutFrom = ({ cart, price }) => {
             setTransactionId(paymentIntent.id);
             Swal.fire({
               title: "Congrats! Your Payment Received",
-              text: `Your Registration Complete!✅ TransID: ${paymentIntent?.id}`,
+              text: `Your Order Complete!✅ TransID: ${paymentIntent?.id}`,
               icon: "success",
               confirmButtonText: "Done",
           })    .then((result) => {
@@ -118,21 +118,7 @@ const CheckoutFrom = ({ cart, price }) => {
                 confirmButtonText: "Done",
             })
         });
-      
-            // axiosPublic.post('/payments', payment)
-            //     .then(res => {
-            //         console.log(res.data);
-            //         if (res.data.result.insertedId) {
-            //             Swal.fire({
-            //                 icon: 'success',
-            //                 title: 'Congratulations!',
-            //                 text: 'Your payment was successfully processed.',
-            //                 confirmButtonText: 'OK'
-            //             }).then(() => {
-            //                 navigate('/dashboard/payment-history');
-            //             });
-            //         }
-            //     })
+           
         }
 
 
