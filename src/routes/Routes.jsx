@@ -16,6 +16,7 @@ import Payment from "../pages/dashboard/user/Payment/Payment";
 import PaymentHistory from "../pages/dashboard/user/PaymentHistory";
 import PrivateRoutes from "./PrivateRoutes";
 import UserHome from "../pages/dashboard/user/Home/UserHome";
+import AdminHome from './../pages/dashboard/admin/Home/AdminHome';
 
 
 
@@ -50,6 +51,10 @@ export const router = createBrowserRouter([
       {
         path: 'payment-history',  
         element: <PaymentHistory/>
+      },
+      {
+        path: 'admin-home', 
+        element: <AdminRoute><AdminHome/></AdminRoute> 
       },
       {
         path: 'manage-user', 
