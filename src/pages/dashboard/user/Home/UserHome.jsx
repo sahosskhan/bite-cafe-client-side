@@ -1,21 +1,22 @@
+
 import useAuth from "../../../../hooks/useAuth";
 import useUserData from "../../../../hooks/useUserData";
 
 
 const UserHome = () => {
-    const {userList, refetch, isLoading} = useUserData();
+    const {userList} = useUserData();
     const {user} = useAuth();
 
     const FilterUserList = userList.filter(item => item.email === user?.email);
     
     const imageFilter = FilterUserList.map(user => user.image);
     const nameFilter = FilterUserList.map(user => user.name);
+
+
+
+
     return (
         <div className="p-20">
-            
-
-
-
 
 <div className="flex flex-row items-center justify-evenly ">
 <div className="flex w-full p-16 flex-col justify-center items-center bg-amber-100">

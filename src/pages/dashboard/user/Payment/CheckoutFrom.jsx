@@ -51,8 +51,7 @@ const CheckoutFrom = ({ cart, price }) => {
             setCardError('');
             // console.log('payment method', paymentMethod)
         }
-
-        setProcessing(true)
+       
 
         const { paymentIntent, error: confirmError } = await stripe.confirmCardPayment(
             clientSecret,
@@ -71,9 +70,9 @@ const CheckoutFrom = ({ cart, price }) => {
             console.log(confirmError);
         }
       
-        setProcessing(false)
+      
         if (paymentIntent.status === 'succeeded') {
-            setTransactionId(paymentIntent.id);
+            
             Swal.fire({
               title: "Congrats! Your Payment Received",
               text: `Your Order Complete!✅ TransID: ${paymentIntent?.id}`,
