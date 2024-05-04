@@ -52,7 +52,7 @@ const ManageItems = () => {
                    <h1 className="text-5xl">😑 Items Not Found!</h1>
                    
                    </div>:
-<div  className="min-h-screen">
+<div>
 <HeadingTitle text={{ short: 'hurry up they are waiting?', long: 'MANAGE ALL ITEMS' }} />
 <div className="uppercase font-semibold h-[60px] flex justify-evenly items-center">
                 <h3 className="text-2xl">Total Users:  <span className="text-amber-800 ml-2">{menu?.length}</span></h3>

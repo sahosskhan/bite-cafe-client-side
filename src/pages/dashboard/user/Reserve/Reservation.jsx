@@ -26,13 +26,13 @@ const Reservation = () => {
     const onSubmit = (data) => {
         const { bookingDate, bookingTime, bookingPhone ,bookingGuest} = data;
         const BookingData = {
-            bookingDate: bookingDate,
-            bookingTime: bookingTime,
-            bookingPhone: bookingPhone,
-            bookingGuest: bookingGuest,
-            bookingEmail: emailFilter,
-            bookingName: nameFilter,
-            bookingStatus: "Pending",
+            date: bookingDate,
+           time: bookingTime,
+           phone: bookingPhone,
+            guest: bookingGuest,
+            email: emailFilter,
+            name: nameFilter,
+            status: "pending",
         };
         axiosPublic.post('/bookings-data-send', BookingData)
         .then(res => {
@@ -64,7 +64,7 @@ const Reservation = () => {
 
 
 <form onSubmit={handleSubmit(onSubmit)} className="rounded-lg p-10">
-                <div className="grid grid-cols-3 gap-6">
+                <div className="grid lg:grid-cols-3 grid-cols-1 gap-6">
                     <div className="w-full  px-4">
                         <label className="text-xl font-medium">Your Full Name</label>
                         <input defaultValue={nameFilter} disabled className="flex h-14 w-full text-black font-medium placeholder:text-gray-500 rounded-md border px-3 py-2 text-xl focus:outline-none" />

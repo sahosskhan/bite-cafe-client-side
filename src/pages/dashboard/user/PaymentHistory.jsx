@@ -16,13 +16,13 @@ const PaymentHistory = () => {
 
 
           <div className="overflow-x-auto  ">
-    <table className="shadow-md max-w-screen-2xl container mx-auto ">
+    <table className="shadow-md container mx-auto  ">
         <thead>
             <tr className="bg-amber-600 text-xl text-white">
             <th className="py-4 px-6  text-left border-b">#</th>
             <th className="py-4 px-6  text-left border-b">Items</th>
                 <th className="py-4 px-6  text-left border-b">Transaction ID</th>
-                <th className="py-4 px-6  text-left border-b">Date (dd/mm/yy)</th>
+                <th className="py-4 px-6  text-left border-b">Date</th>
                 <th className="py-4 px-6  text-left border-b">Total Price</th>
             </tr>
         </thead>
