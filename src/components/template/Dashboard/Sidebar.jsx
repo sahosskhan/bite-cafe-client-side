@@ -74,7 +74,7 @@ const Sidebar = () => {
 
   <MenuItem
       icon={FaHome}
-      label='User Home'
+      label='Admin Home'
       address='/dashboard/admin-home'
     />
   <MenuItem

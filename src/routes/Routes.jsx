@@ -17,6 +17,9 @@ import PaymentHistory from "../pages/dashboard/user/PaymentHistory";
 import PrivateRoutes from "./PrivateRoutes";
 import UserHome from "../pages/dashboard/user/Home/UserHome";
 import AdminHome from './../pages/dashboard/admin/Home/AdminHome';
+import Reservation from "../pages/dashboard/user/Reserve/Reservation";
+import MyBooking from "../pages/dashboard/user/Reserve/MyBooking";
+
 
 
 
@@ -51,6 +54,14 @@ export const router = createBrowserRouter([
       {
         path: 'payment-history',  
         element: <PaymentHistory/>
+      },
+      {
+        path: 'reservation', 
+        element: <Reservation/>
+      },
+      {
+        path: 'my-booking', 
+        element: <MyBooking/>
       },
       {
         path: 'admin-home', 
