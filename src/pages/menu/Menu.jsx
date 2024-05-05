@@ -11,12 +11,16 @@ import PizzaMenu from "../../components/menu/PizzaMenu";
 import BurgerMenu from "../../components/menu/BurgerMenu";
 import PastaMenu from "../../components/menu/PastaMenu";
 import DessertMenu from "../../components/menu/DessertMenu";
+import { Helmet } from "react-helmet-async";
 
 const Menu = () => {
     const [menu, loading] = useMenu([]);
     if (loading) return <Loader/>;
     return (
         <div style={{backgroundImage: `url(${bgImg})`}} >
+                     <Helmet>
+        <title>Menu|BiteCafe</title>
+      </Helmet>
         <Parallax blur={{ min: -30, max: 30 }} bgImage={img1} bgImageAlt="menu banner" strength={200}>
        <HeadingBanner banner={{ title: 'Our Menu'}}></HeadingBanner>
        </Parallax>

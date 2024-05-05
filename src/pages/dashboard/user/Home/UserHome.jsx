@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import useAuth from "../../../../hooks/useAuth";
 import useBookings from "../../../../hooks/useBookings";
 import useCarts from "../../../../hooks/useCarts";
@@ -23,7 +24,9 @@ const  [cart ]= useCarts();
 
     return (
         <div className="p-20">
-
+         <Helmet>
+        <title>User Home|BiteCafe</title>
+      </Helmet>
 <div className="flex flex-row items-center justify-evenly ">
 <div className="flex w-full p-16 flex-col justify-center items-center bg-orange-100">
 <div className="avatar online">

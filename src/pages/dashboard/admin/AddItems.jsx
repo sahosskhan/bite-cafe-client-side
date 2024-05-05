@@ -6,6 +6,7 @@ import { RiImageAddFill } from "react-icons/ri";
 import { IoCloseSharp } from "react-icons/io5";
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -73,6 +74,9 @@ const handleImageChange = (event) => {
     };
     return (
         <div className="max-w-screen-2xl mx-auto container">
+                         <Helmet>
+        <title>Add Items|BiteCafe</title>
+      </Helmet>
           <HeadingTitle text={{ short: 'What is new in menu?', long: 'ADD AN ITEM' }} />
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control w-full mb-4">

@@ -7,6 +7,7 @@ import Rating from "react-rating";
 import Swal from "sweetalert2";
 import { useState } from "react";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
+import { Helmet } from "react-helmet-async";
 
 
 const Review = () => {
@@ -44,6 +45,9 @@ axiosPublic.post('/reviews-data-send', ReviewData)
     }
     return (
         <div>
+                           <Helmet>
+        <title>Add Review|BiteCafe</title>
+      </Helmet>
                     <HeadingTitle text={{ short: 'Share what is in your mind', long: 'ADD A Review' }} />
 
                     <div className="container mx-auto ">

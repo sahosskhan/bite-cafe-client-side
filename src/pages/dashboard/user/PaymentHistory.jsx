@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import HeadingTitle from "../../../components/template/HeadingTitle";
 import usePayment from "../../../hooks/usePayment";
 import HistoryTable from "./Payment/HistoryTable";
@@ -7,6 +8,9 @@ const PaymentHistory = () => {
   const [ payment] = usePayment();
     return (
         <div >
+                           <Helmet>
+        <title>Payment History|BiteCafe</title>
+      </Helmet>
           <HeadingTitle text={{ short: 'eat to live, live to pay', long: 'PAYMENT History' }} />  
 
 

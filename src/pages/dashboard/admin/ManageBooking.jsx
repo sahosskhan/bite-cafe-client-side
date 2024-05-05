@@ -3,6 +3,7 @@ import HeadingTitle from "../../../components/template/HeadingTitle";
 import useAllBookings from "../../../hooks/useAllBookings";
 import Loader from "../../../components/loader/Loader";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const ManageBooking = () => {
@@ -70,7 +71,10 @@ const handleRejectBook= item =>{
           
           </div>:
 <div>
-<HeadingTitle text={{ short: 'hurry up they are waiting?', long: 'MANAGE ALL ITEMS' }} />
+<Helmet>
+        <title>Manage Bookings|BiteCafe</title>
+      </Helmet>
+<HeadingTitle text={{ short: 'someone wait for confirmation', long: 'MANAGE BOOKINGS' }} />
 <div className="uppercase font-semibold h-[60px] flex justify-evenly items-center">
        <h3 className="text-2xl">Total Users:  <span className="text-amber-800 ml-2">{ allBookings?.length}</span></h3>
    </div>

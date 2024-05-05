@@ -7,10 +7,14 @@ import PopularMenu from './../../components/home/PopularMenu';
 import Delivery from './../../components/home/Delivery';
 import Recommend from '../../components/home/Recommend';
 import Testimonial from '../../components/home/Testimonial';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
     return (
         <div style={{backgroundImage: `url(${bgImg})`}}>
+              <Helmet>
+        <title>Home|BiteCafe</title>
+      </Helmet>
        <SliderMain/>
        <HeadingTitle text={{ short: 'From 11:00am to 11:00pm', long: 'ORDER ONLINE' }} />
        <CategorySwipe/>

@@ -3,6 +3,7 @@ import useCarts from "../../../hooks/useCarts";
 import Loader from "../../../components/loader/Loader";
 import HeadingTitle from "../../../components/template/HeadingTitle";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 
 const MyCart = () => {
@@ -49,7 +50,10 @@ const MyCart = () => {
                    <h1 className="text-5xl">😑 Items Not Found! Please Add Items In Your Cart</h1>
                    
                    </div>:
-<div  className="min-h-screen">
+<div  className="">
+<Helmet>
+        <title>My Carts|BiteCafe</title>
+      </Helmet>
 <HeadingTitle text={{ short: 'Welcome to cart, wanna add more?', long: 'MY CARTS' }} />
 <div className="uppercase font-semibold h-[60px] flex lg:flex-row flex-col justify-evenly lg:mb-0 mb-10 gap-4 items-center">
                 <h3 className="text-2xl">Total Items: <span className="text-amber-800">{cart.length}</span></h3>

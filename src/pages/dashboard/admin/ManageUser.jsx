@@ -3,6 +3,7 @@ import Loader from "../../../components/loader/Loader";
 import HeadingTitle from "../../../components/template/HeadingTitle";
 
 import useUserData from "../../../hooks/useUserData";
+import { Helmet } from "react-helmet-async";
 
 
 const ManageUser = () => {
@@ -74,7 +75,10 @@ const ManageUser = () => {
                    <h1 className="text-5xl">😑 User Not Found!</h1>
                    
                    </div>:
-<div  className="min-h-screen">
+<div  className="">
+<Helmet>
+        <title>Manage User|BiteCafe</title>
+      </Helmet>
 <HeadingTitle text={{ short: 'how many user do you I have?', long: 'MANAGE USERS' }} />
 <div className="uppercase font-semibold h-[60px] flex justify-evenly items-center">
                 <h3 className="text-2xl">Total Users:  <span className="text-amber-800 ml-2">{userList?.length}</span></h3>

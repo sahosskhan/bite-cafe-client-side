@@ -2,6 +2,7 @@ import { useState } from "react";
 import HeadingTitle from "../../../../components/template/HeadingTitle";
 import useBookings from "../../../../hooks/useBookings";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const MyBooking = () => {
@@ -73,6 +74,9 @@ const MyBooking = () => {
           
           </div>:
 <div>
+<Helmet>
+        <title>My Bookings|BiteCafe</title>
+      </Helmet>
 <HeadingTitle text={{ short: 'I am waiting for confirmation', long: 'My Bookings' }} />
 <div className="uppercase font-semibold h-[60px] flex justify-evenly items-center">
        <h3 className="text-2xl">Total Bookings:  <span className="text-amber-800 ml-2">{ booking?.length}</span></h3>

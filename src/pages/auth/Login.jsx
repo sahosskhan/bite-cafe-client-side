@@ -11,6 +11,7 @@ import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
 import Socialbtn from "./Socialbtn";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -72,6 +73,9 @@ const Login = () => {
 
     return (
         <>
+                       <Helmet>
+        <title>Continue With Account|BiteCafe</title>
+      </Helmet>
             <div className="bg-form min-h-screen flex justify-center items-center">
         <div>
           <div className="max-w-7xl mx-auto p-6 bg-amber-50 rounded-xl shadow-xl sm:px-8 sm:py-10 lg:px-12 lg:py-16">

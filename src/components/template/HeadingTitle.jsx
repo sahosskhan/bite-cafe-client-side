@@ -3,7 +3,7 @@
 const HeadingTitle = ({ text }) => {
   return (
     <>
-      <div className="mx-auto text-center lg:w-[20%] md:w-[70%] w-[70%] my-8 p-2">
+      <div className="mx-auto text-center lg:w-[25%] md:w-[70%] w-[70%] my-8 p-2">
         <p className="text-amber-600 italic text-xl mb-6">
           --- {text?.short} ---
         </p>

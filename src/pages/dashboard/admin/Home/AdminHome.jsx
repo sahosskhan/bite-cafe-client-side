@@ -10,6 +10,7 @@ import { BsCartCheckFill } from "react-icons/bs";
 import useAllPay from "../../../../hooks/useAllPay";
 import useMenu from "../../../../hooks/useMenu";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, PieChart, Pie, Legend } from 'recharts';
+import { Helmet } from "react-helmet-async";
 
 const colors = ['#ff4233', '#1a831d', '#d3932f', '#50a3d4', '#6d68cd', '#ee82ee'];
 const COLORS = ['#ff4233', '#1a831d', '#d3932f', '#50a3d4', '#6d68cd', '#ee82ee'];
@@ -89,7 +90,10 @@ const pieChartData = categoryDataArray.map(data => {
 
     return (
         <div>
-<div className="grid grid-cols-4 gap-10">
+                           <Helmet>
+        <title>Admin Home|BiteCafe</title>
+      </Helmet>
+<div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  gap-10">
 
 
 <div className="text-white rounded-xl bg-fuchsia-600/70 flex justify-center items-center gap-6">

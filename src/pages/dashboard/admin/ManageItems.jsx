@@ -3,6 +3,7 @@ import Loader from "../../../components/loader/Loader";
 import HeadingTitle from "../../../components/template/HeadingTitle";
 import useMenu from "../../../hooks/useMenu";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const ManageItems = () => {
     const [menu, loading, refetch] = useMenu();
@@ -53,7 +54,10 @@ const ManageItems = () => {
                    
                    </div>:
 <div>
-<HeadingTitle text={{ short: 'hurry up they are waiting?', long: 'MANAGE ALL ITEMS' }} />
+<Helmet>
+        <title>Manage Items|BiteCafe</title>
+      </Helmet>
+<HeadingTitle text={{ short: 'hurry up they are waiting?', long: 'MANAGE ITEMS' }} />
 <div className="uppercase font-semibold h-[60px] flex justify-evenly items-center">
                 <h3 className="text-2xl">Total Users:  <span className="text-amber-800 ml-2">{menu?.length}</span></h3>
             </div>

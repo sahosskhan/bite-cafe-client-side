@@ -9,6 +9,7 @@ import Swal from "sweetalert2";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import useAuth from "../../hooks/useAuth";
 import Socialbtn from "./Socialbtn";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -100,6 +101,9 @@ const Register = () => {
     };
     return (
         <div>
+                         <Helmet>
+        <title>Create An Account|BiteCafe</title>
+      </Helmet>
                 <div className="bg-form min-h-screen flex justify-center items-center">
       <div>
         <div className="max-w-7xl mx-auto p-6 bg-amber-50 rounded-xl shadow-xl sm:px-8 sm:py-10 lg:px-12 lg:py-16">

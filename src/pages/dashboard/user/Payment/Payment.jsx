@@ -3,6 +3,7 @@ import HeadingTitle from "../../../../components/template/HeadingTitle";
 import useCarts from "../../../../hooks/useCarts";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutFrom from "./CheckoutFrom";
+import { Helmet } from "react-helmet-async";
 
 const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_GATEWAY_PK);
 const Payment = () => {
@@ -11,6 +12,9 @@ const Payment = () => {
     const price = parseFloat(total.toFixed(2))
     return (
         <div>
+                 <Helmet>
+        <title>Payment|BiteCafe</title>
+      </Helmet>
               <HeadingTitle text={{ short: 'Please pay to eat', long: 'PAYMENT HERE' }} />
             <div className="flex justify-center items-center lg:my-[381px]">
             <Elements stripe={stripePromise}>

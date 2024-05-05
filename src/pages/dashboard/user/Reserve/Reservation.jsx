@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { FaTable } from "react-icons/fa";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const Reservation = () => {
@@ -58,6 +59,9 @@ const Reservation = () => {
 
     return (
         <div>
+                           <Helmet>
+        <title>Book A Table |BiteCafe</title>
+      </Helmet>
              <HeadingTitle text={{ short: 'Enjoy moments with us', long: 'BOOK A TABLE' }} />
             
 <section>

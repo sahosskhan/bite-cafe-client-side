@@ -6,6 +6,7 @@ import { useRef, useState } from "react";
 import { RiImageAddFill } from "react-icons/ri";
 import { IoCloseSharp } from "react-icons/io5";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const EditItems = () => {
     const img_hosting_token = import.meta.env.VITE_ImgBBAPI;
@@ -96,6 +97,9 @@ const EditItems = () => {
 
     return (
         <div className="max-w-screen-2xl mx-auto container">
+                         <Helmet>
+        <title>Edit Items|BiteCafe</title>
+      </Helmet>
              <HeadingTitle text={{ short: 'What is change in menu?', long: 'Edit AN ITEM' }} />
              <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control w-full mb-4">

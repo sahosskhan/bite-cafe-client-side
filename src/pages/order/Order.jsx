@@ -10,6 +10,7 @@ import img1 from '../../../assets/shop/banner2.jpg';
 import bgImg from '../../../assets/menu/menu-bg.png';
 import OrderTabData from "../../components/order/OrderTabData";
 import { Parallax } from "react-parallax";
+import { Helmet } from "react-helmet-async";
 const Order = () => {
     const categories = ['Biryani', 'Steak', 'Pizza', 'Burger', 'Pasta', 'Dessert'];
     const { category } = useParams();
@@ -26,6 +27,9 @@ const Order = () => {
     const Dessert = menu.filter(item => item.category === 'Dessert');
     return (
         <div>
+                     <Helmet>
+        <title>Order|BiteCafe</title>
+      </Helmet>
          <div style={{backgroundImage: `url(${bgImg})`}}>
             <Parallax blur={{ min: -30, max: 30 }} bgImage={img1} bgImageAlt="menu banner" strength={200}>
                 <HeadingBanner banner={{ title: 'Order Now'}} />
