@@ -58,7 +58,7 @@ const Reservation = () => {
 
     return (
         <div>
-             <HeadingTitle text={{ short: 'What is new in menu?', long: 'ADD AN ITEM' }} />
+             <HeadingTitle text={{ short: 'Enjoy moments with us', long: 'BOOK A TABLE' }} />
             
 <section>
 

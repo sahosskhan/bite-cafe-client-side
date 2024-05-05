@@ -20,6 +20,10 @@ import AdminHome from './../pages/dashboard/admin/Home/AdminHome';
 import Reservation from "../pages/dashboard/user/Reserve/Reservation";
 import MyBooking from "../pages/dashboard/user/Reserve/MyBooking";
 import ManageBooking from "../pages/dashboard/admin/ManageBooking";
+import Review from "../pages/dashboard/user/Review";
+
+
+
 
 
 
@@ -64,6 +68,10 @@ export const router = createBrowserRouter([
         path: 'my-booking', 
         element: <MyBooking/>
       },
+   {
+    path: 'add-review', 
+    element: <Review/>
+   },
       {
         path: 'admin-home', 
         element: <AdminRoute><AdminHome/></AdminRoute> 
