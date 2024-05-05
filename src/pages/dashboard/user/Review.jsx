@@ -18,10 +18,12 @@ const Review = () => {
 
     const FilterUserList = userList.filter((item) => item.email === user?.email);
     const nameFilter = FilterUserList.map((user) => user.name).join(", ");
+    const emailFilter = FilterUserList.map((user) => user.email).join(", ");
     const onSubmit = (data) => {
         const {reviewText} = data;
         const ReviewData = {
             name: nameFilter,
+            email: emailFilter,
             details: reviewText,
             rating: star
         };

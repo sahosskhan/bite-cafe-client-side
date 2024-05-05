@@ -2,9 +2,9 @@ import { useState } from "react";
 import useAuth from "../../../hooks/useAuth";
 import { AiOutlineBars } from "react-icons/ai";
 import MenuItem from "./MenuItem";
-import { FaBookmark, FaCalendarAlt, FaHome, FaList, FaUtensils, FaWallet } from "react-icons/fa";
+import { FaBookmark, FaCalendarAlt, FaHome, FaList, FaShoppingBag, FaSitemap, FaUtensils, FaWallet } from "react-icons/fa";
 import { GrLogout } from "react-icons/gr";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaCartShopping, FaUsersGear } from "react-icons/fa6";
 import { PiCalendarCheckFill, PiShootingStarFill } from "react-icons/pi";
 import useAdmin from "../../../hooks/useAdmin";
@@ -13,6 +13,14 @@ import useAdmin from "../../../hooks/useAdmin";
 const Sidebar = () => {
     const [isActive, setActive] = useState(false)
     const { logOut } = useAuth()
+    const navigate = useNavigate();
+    const handleLogOut = () => {
+      logOut()
+          .then(() => {
+            navigate('/');
+          })
+          .catch(error => console.log(error));
+  }
       // Sidebar Responsive Handler
   const handleToggle = () => {
     setActive(!isActive)
@@ -146,8 +154,20 @@ const Sidebar = () => {
               label='Home'
               address='/'
             />
+            <MenuItem
+              icon={FaSitemap}
+              label='Menu'
+              address='/our-menu'
+            />
+
+               <MenuItem
+              icon={FaShoppingBag}
+              label='Order'
+              address='/order-here/Biryani'
+            />
+   
             <button
-              onClick={logOut}
+              onClick={handleLogOut}
               className='flex w-full items-center px-4 py-2 mt-5 text-black hover:bg-black hover:text-white   transition-colors duration-300 transform'
             >
               <GrLogout className='w-5 h-5' />

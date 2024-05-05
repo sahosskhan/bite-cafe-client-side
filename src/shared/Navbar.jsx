@@ -1,5 +1,5 @@
 import { FaBars, FaCartPlus } from "react-icons/fa";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import useUserData from "../hooks/useUserData";
 import useCarts from "../hooks/useCarts";
@@ -10,9 +10,14 @@ const Navbar = () => {
   const {userList}=useUserData();
   const FilterUserList = userList.filter(item => item.email === user?.email);
   const imageFilter = FilterUserList.map(user => user.image);
+  const roleFilter = FilterUserList.map(user => user.role);
+  console.log(roleFilter);
+  const navigate = useNavigate();
   const handleLogOut = () => {
     logOut()
-        .then(() => { })
+        .then(() => {
+          navigate('/');
+        })
         .catch(error => console.log(error));
 }
 const [isAdmin] = useAdmin();
@@ -52,7 +57,7 @@ const [cart] = useCarts();
 
           
         <div className="flex justify-center items-center gap-2">
-        {!isAdmin &&
+        {roleFilter =="user" &&
         <NavLink to="/dashboard/my-cart">
         <button className="h-12 inline-flex rounded-btn justify-center items-center gap-4 px-3 py-2 bg-amber-400 hover:bg-amber-400  text-black font-medium  border-0">
         <FaCartPlus size={25} />
