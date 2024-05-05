@@ -1,22 +1,67 @@
 import { useState } from "react";
-import Loader from "../../../../components/loader/Loader";
 import HeadingTitle from "../../../../components/template/HeadingTitle";
 import useBookings from "../../../../hooks/useBookings";
+import Swal from "sweetalert2";
 
 
 const MyBooking = () => {
-    const [booking,refetch] = useBookings();
+    const [booking, refetch] = useBookings();
     const [openModal, setOpenModal] = useState(false);
 
+    const handleDelete = item => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/delete-bookings-one/${item._id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            refetch();
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
+                        }
+                    })
+            }
+        })
+    }
+
+    const handleReBook= item =>{
+        fetch(`http://localhost:5000/re-booking/${item._id}`, {
+            method: 'PATCH'
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.modifiedCount){
+                refetch();
+                Swal.fire({
+                    icon: 'success',
+                    title: "Congratulations!",
+                    text: "Re-Booking is completed",
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
+        })
+    }
 
 
 
 
 
 
-
-
-    
     return (
         <div>
         <div >
@@ -28,9 +73,9 @@ const MyBooking = () => {
           
           </div>:
 <div>
-<HeadingTitle text={{ short: 'hurry up they are waiting?', long: 'MANAGE ALL ITEMS' }} />
+<HeadingTitle text={{ short: 'I am waiting for confirmation', long: 'My Bookings' }} />
 <div className="uppercase font-semibold h-[60px] flex justify-evenly items-center">
-       <h3 className="text-2xl">Total Users:  <span className="text-amber-800 ml-2">{ booking?.length}</span></h3>
+       <h3 className="text-2xl">Total Bookings:  <span className="text-amber-800 ml-2">{ booking?.length}</span></h3>
    </div>
    <div className="overflow-x-auto  ">
 <table className="shadow-md container mx-auto ">
@@ -85,13 +130,24 @@ const MyBooking = () => {
        <td className="py-4 px-6 border-b text-2xl   font-medium">{item.guest}</td>
        <td className="py-4 px-6 border-b text-2xl   font-medium">{item.status}</td>
        <td className="py-4 px-2 border-b text-end">
-{ item.status == "pending" ? <button  className="bg-gray-500 disabled  cursor-wait hover:scale-110 scale-100 transition-all duration-500 text-white py-2 px-4 text-xl font-medium  rounded-md">Processing...</button>
- : <button  className="bg-green-500 hover:scale-110 scale-100 transition-all duration-500 text-white py-2 px-4 text-xl font-medium  rounded-md">Re Book</button>
+{ item.status == "pending" && <button  className="bg-gray-500 disabled  cursor-wait hover:scale-110 scale-100 transition-all duration-500 text-white py-2 px-4 text-xl font-medium  rounded-md">Processing...</button> }
+
+ {item.status == "rejected" &&
+  <button onClick={() => handleReBook(item)}   className="bg-green-500 hover:scale-110 scale-100 transition-all duration-500 text-white py-2 px-4 text-xl font-medium  rounded-md">Re Book</button>
+}
+{item.status == "approved" &&
+  <button disabled className="bg-gray-500 cursor-not-allowed hover:scale-110 scale-100 transition-all duration-500 text-white py-2 px-4 text-xl font-medium  rounded-md">Approved</button>
 }
            </td>
 
        <td className="py-4 px-5 border-b text-end">
-           <button  className="bg-red-500 hover:scale-110 scale-100 transition-all duration-500 text-white py-2 px-4 text-xl font-medium  rounded-md">Cancel</button>
+      { item.status == "rejected" &&  <button onClick={() => handleDelete(item)}  className="bg-red-500 hover:scale-110 scale-100 transition-all duration-500 text-white py-2 px-4 text-xl font-medium  rounded-md">Cancel</button> }
+
+      { item.status == "pending" &&  <button onClick={() => handleDelete(item)}  className="bg-red-500 hover:scale-110 scale-100 transition-all duration-500 text-white py-2 px-4 text-xl font-medium  rounded-md">Cancel</button> }
+
+           {item.status == "approved" &&
+  <button disabled className="bg-gray-500 cursor-not-allowed hover:scale-110 scale-100 transition-all duration-500 text-white py-2 px-4 text-xl font-medium  rounded-md">Can&apos;t Cancel</button>
+}
        </td>
    </tr>)
 }
