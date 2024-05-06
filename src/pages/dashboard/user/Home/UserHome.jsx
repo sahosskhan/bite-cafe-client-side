@@ -19,7 +19,7 @@ const  [cart ]= useCarts();
     const FilterUserList = userList.filter(item => item.email === user?.email);
     const imageFilter = FilterUserList.map(user => user.image);
     const nameFilter = FilterUserList.map(user => user.name);
-
+    const emailFilter = FilterUserList.map(user => user.email);
 
 
     return (
@@ -35,6 +35,7 @@ const  [cart ]= useCarts();
   </div>
 </div>
 <h1 className="text-3xl font-medium mt-6">{nameFilter}</h1>
+<h1 className="text-xl font-medium mt-2">{emailFilter}</h1>
 </div>
 
 <div className="flex w-full border-l-4 border-black  p-14 flex-col justify-center  bg-amber-100">

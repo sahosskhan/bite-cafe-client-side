@@ -45,7 +45,7 @@ const MyCart = () => {
         <div>
             {
                 cart?.length === 0? 
-                   <div className=" flex justify-center items-center">
+                   <div className=" min-h-screen flex justify-center items-center">
                    
                    <h1 className="text-5xl">😑 Items Not Found! Please Add Items In Your Cart</h1>
                    

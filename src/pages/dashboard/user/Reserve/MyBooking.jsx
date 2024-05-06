@@ -70,7 +70,7 @@ const MyBooking = () => {
       booking?.length === 0? 
           <div className=" flex justify-center items-center ">
           
-          <h1 className="text-5xl">😑 Items Not Found!</h1>
+          <h1 className="text-5xl">😑 Bookings Not Found!  Please Book A Table.</h1>
           
           </div>:
 <div>
