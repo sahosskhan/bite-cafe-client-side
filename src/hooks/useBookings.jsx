@@ -8,7 +8,7 @@ const useBookings = () => {
     const { refetch, isLoading, data: booking = [] } = useQuery({
         queryKey: ['bookings', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/show-all-bookings?email=${user?.email}`)
+            const res = await fetch(`https://bite-cafe-server-side.vercel.app/show-all-bookings?email=${user?.email}`)
             return res.json();
         },
     })

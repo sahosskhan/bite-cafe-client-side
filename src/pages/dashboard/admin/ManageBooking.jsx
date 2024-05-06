@@ -14,7 +14,7 @@ if(loading){
 }
 
 const handleApproveBook= item =>{
-    fetch(`http://localhost:5000/approve-booking/${item._id}`, {
+    fetch(`https://bite-cafe-server-side.vercel.app/approve-booking/${item._id}`, {
         method: 'PATCH'
     })
     .then(res => res.json())
@@ -35,7 +35,7 @@ const handleApproveBook= item =>{
 
 
 const handleRejectBook= item =>{
-    fetch(`http://localhost:5000/reject-booking/${item._id}`, {
+    fetch(`https://bite-cafe-server-side.vercel.app/reject-booking/${item._id}`, {
         method: 'PATCH'
     })
     .then(res => res.json())

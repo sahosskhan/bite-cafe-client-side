@@ -15,7 +15,7 @@ const ManageUser = () => {
     }
 
     const handleMakeAdmin = item =>{
-        fetch(`http://localhost:5000/users/admin/${item._id}`, {
+        fetch(`https://bite-cafe-server-side.vercel.app/users/admin/${item._id}`, {
             method: 'PATCH'
         })
         .then(res => res.json())
@@ -45,7 +45,7 @@ const ManageUser = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/user-delete-one/${item._id}`, {
+                fetch(`https://bite-cafe-server-side.vercel.app/user-delete-one/${item._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

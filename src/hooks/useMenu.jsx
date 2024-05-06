@@ -6,7 +6,7 @@ const useMenu = () => {
     const {data: menu = [], isLoading: loading, refetch} = useQuery({
         queryKey: ['menu'],
         queryFn: async() => {
-            const res = await fetch('http://localhost:5000/show-all-menu');
+            const res = await fetch('https://bite-cafe-server-side.vercel.app/show-all-menu');
             return res.json();
         }
     })

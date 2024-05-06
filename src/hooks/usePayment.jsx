@@ -8,7 +8,7 @@ const usePayment = () => {
     const { refetch, isLoading, data: payment = [] } = useQuery({
         queryKey: ['payments', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/show-all-payments?email=${user?.email}`)
+            const res = await fetch(`https://bite-cafe-server-side.vercel.app/show-all-payments?email=${user?.email}`)
             return res.json();
         },
     })

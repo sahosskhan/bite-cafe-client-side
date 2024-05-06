@@ -8,7 +8,7 @@ const useCarts = () => {
     const { refetch, isLoading, data: cart = [] } = useQuery({
         queryKey: ['carts', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/show-all-carts?email=${user?.email}`)
+            const res = await fetch(`https://bite-cafe-server-side.vercel.app/show-all-carts?email=${user?.email}`)
             return res.json();
         },
     })

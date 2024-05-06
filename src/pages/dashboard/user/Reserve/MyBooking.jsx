@@ -20,7 +20,7 @@ const MyBooking = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/delete-bookings-one/${item._id}`, {
+                fetch(`https://bite-cafe-server-side.vercel.app/delete-bookings-one/${item._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -39,7 +39,7 @@ const MyBooking = () => {
     }
 
     const handleReBook= item =>{
-        fetch(`http://localhost:5000/re-booking/${item._id}`, {
+        fetch(`https://bite-cafe-server-side.vercel.app/re-booking/${item._id}`, {
             method: 'PATCH'
         })
         .then(res => res.json())

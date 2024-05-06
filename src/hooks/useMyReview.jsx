@@ -8,7 +8,7 @@ const useMyReview = () => {
     const { refetch, isLoading, data: review = [] } = useQuery({
         queryKey: ['reviews', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/show-my-reviews?email=${user?.email}`)
+            const res = await fetch(`https://bite-cafe-server-side.vercel.app/show-my-reviews?email=${user?.email}`)
             return res.json();
         },
     })

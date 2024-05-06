@@ -97,7 +97,7 @@ export const router = createBrowserRouter([
       {
         path: 'edit-items/:id', 
         element: <AdminRoute><EditItems/></AdminRoute>,
-        loader: ({params})=> fetch (`http://localhost:5000/show-one-menu/${params.id}`) 
+        loader: ({params})=> fetch (`https://bite-cafe-server-side.vercel.app/show-one-menu/${params.id}`) 
 
       }
     ]

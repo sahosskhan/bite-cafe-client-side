@@ -94,7 +94,7 @@ const CheckoutFrom = ({ cart, price }) => {
                 itemNames: cart.map(item => item.name)
             }
             
-            fetch("http://localhost:5000/payments", {
+            fetch("https://bite-cafe-server-side.vercel.app/payments", {
           method: "POST",
           headers: {
               "content-type": "application/json",
