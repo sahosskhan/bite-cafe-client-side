@@ -68,7 +68,7 @@ const MyBooking = () => {
         <div >
                {
       booking?.length === 0? 
-          <div className=" flex justify-center items-center ">
+          <div className="min-h-screen flex justify-center items-center ">
           
           <h1 className="text-5xl">😑 Bookings Not Found!  Please Book A Table.</h1>
           
