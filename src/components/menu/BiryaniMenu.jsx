@@ -25,7 +25,7 @@ const BiryaniMenu = ({menu}) => {
              }
      </div>  
      <div className="flex justify-center items-center">
-     <CategoryBtn BText={{ title: 'ORDER YOUR FAVORITE FOOD' }} category="Biryani" />
+     <CategoryBtn BText={{ title: 'ORDER SOME BIRYANI' }} category="Biryani" />
 </div> 
         </div>  
         </>
