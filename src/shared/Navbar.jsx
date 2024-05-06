@@ -11,7 +11,6 @@ const Navbar = () => {
   const FilterUserList = userList.filter(item => item.email === user?.email);
   const imageFilter = FilterUserList.map(user => user.image);
   const roleFilter = FilterUserList.map(user => user.role);
-  console.log(roleFilter);
   const navigate = useNavigate();
   const handleLogOut = () => {
     logOut()
@@ -27,7 +26,7 @@ const [cart] = useCarts();
     <Link to="/"> <li> <span className="text-2xl text-black font-medium hover:bg-amber-400">Home</span> </li></Link>
     <Link to="/our-menu"> <li> <span className="text-2xl text-black font-medium hover:bg-amber-400">Menu</span> </li></Link>
     <Link to="/order-here/Biryani"> <li> <span className="text-2xl text-black font-medium hover:bg-amber-400">Order</span> </li></Link>
-    <Link to="/"> <li> <span className="text-2xl text-black font-medium hover:bg-amber-400">Contact</span> </li></Link>
+    <Link to="/contact-us"> <li> <span className="text-2xl text-black font-medium hover:bg-amber-400">Contact</span> </li></Link>
 
     
 </>

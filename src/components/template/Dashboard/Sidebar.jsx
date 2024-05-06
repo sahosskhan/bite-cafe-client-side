@@ -8,6 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaCartShopping, FaUsersGear } from "react-icons/fa6";
 import { PiCalendarCheckFill, PiShootingStarFill } from "react-icons/pi";
 import useAdmin from "../../../hooks/useAdmin";
+import { MdOutlineSupportAgent } from "react-icons/md";
 
 
 const Sidebar = () => {
@@ -164,6 +165,13 @@ const Sidebar = () => {
               icon={FaShoppingBag}
               label='Order'
               address='/order-here/Biryani'
+            />
+
+            
+<MenuItem
+              icon={MdOutlineSupportAgent}
+              label='Contact'
+              address='/contact-us'
             />
    
             <button

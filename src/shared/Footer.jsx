@@ -12,7 +12,7 @@ const Footer = () => {
                     <div className='w-auto space-y-1'>
                         <h3 className='text-center text-2xl mb-2 font-medium'>Contact Us</h3>
                         <p className='text-lg text-center'><i className="fa-solid fa-map-location-dot"></i> 20/1 Lawrence Lane, Thanapara, Kushtia</p>
-                        <p className='text-lg text-center'><i className="fa-solid fa-headset"></i> +88177803082, 778890</p>
+                        <p className='text-lg text-center'><i className="fa-solid fa-headset"></i> +8801778030482, +8801316973995</p>
                         <p className='text-lg text-center'><i className="fa-solid fa-clock"></i> Mon - Fri: 08:00 - 22:00</p>
                         <p className='text-lg text-center'><i className="fa-solid fa-clock"></i> Sat - Sun: 10:00 - 23:00</p>
                     </div>

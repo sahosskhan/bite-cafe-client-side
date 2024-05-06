@@ -21,6 +21,7 @@ import Reservation from "../pages/dashboard/user/Reserve/Reservation";
 import MyBooking from "../pages/dashboard/user/Reserve/MyBooking";
 import ManageBooking from "../pages/dashboard/admin/ManageBooking";
 import Review from "../pages/dashboard/user/Review";
+import Contact from "../pages/conatact/Contact";
 
 
 
@@ -37,6 +38,7 @@ export const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/our-menu", element: <Menu/> },
       { path: "/order-here/:category", element: <Order /> }, 
+      { path: "/contact-us", element: <Contact /> }, 
     
     ],
   },
